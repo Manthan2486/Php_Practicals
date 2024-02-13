@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
 </head>
 <body>
-    <form action="sum.php" method="get">
-        <input type="text" name="a" placeholder="Enter Value of A">
-        <input type="text" name="b" placeholder="Enter Value of B">
-        <input type="submit" name="add">
-        <input type="submit" name="sub">
+    <h2>Simple Calculator</h2>
+    <form method="post" action="sum.php">
+        <label for="num1">Number 1:</label>
+        <input type="number" name="num1" id="num1"><br><br>
+        <label for="num2">Number 2:</label>
+        <input type="number" name="num2" id="num2" required><br><br>
+        
+        <label for="operator">Select Operator:</label>
+        <select name="operator" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br><br>
+        
+        <input type="submit" name="submit" value="Calculate">
     </form>
 </body>
 </html>
