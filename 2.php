@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h2>Student Information Form</h2>
-        <form action="2.action.php" method="post">
+        <form method="post">
             <label for="name">Student Name:</label><br>
             <input type="text" id="name" name="name"><br><br>
 
@@ -29,5 +29,12 @@
             <input type="submit" name="sub" class="btn" value="Submit">
         </form>
     </div>
+    <?php
+    echo "Student Name Is =".$_POST['name']."<br>";
+    echo "Student Enrollment Number Is =".$_POST['eno']."<br>";
+    echo "Student Mobile Number Is =".$_POST['mob']."<br>";
+    echo "Student Department Is =".$_POST['dep']."<br>";
+    echo "Student Division Is =".$_POST['div']."<br>";
+    ?>
 </body>
 </html>
