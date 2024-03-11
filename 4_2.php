@@ -44,10 +44,10 @@
         $grade3 = calculateGrade($sub3);
         $grade4 = calculateGrade($sub4);
 
-        echo "The Marks Of First Is Subject 1 Is: $sub1 And The Greade Is: $grade1<br>";
-        echo "The Marks Of First Is Subject 2 Is: $sub2 And The Greade Is: $grade2<br>";
-        echo "The Marks Of First Is Subject 3 Is: $sub3 And The Greade Is: $grade3<br>";
-        echo "The Marks Of First Is Subject 4 Is: $sub4 And The Greade Is: $grade4<br>";
+        echo "The Marks Of First Is Subject 1 Is: $sub1 And The Grade Is: $grade1<br>";
+        echo "The Marks Of First Is Subject 2 Is: $sub2 And The Grade Is: $grade2<br>";
+        echo "The Marks Of First Is Subject 3 Is: $sub3 And The Grade Is: $grade3<br>";
+        echo "The Marks Of First Is Subject 4 Is: $sub4 And The Grade Is: $grade4<br>";
     ?>
 </body>
 </html>

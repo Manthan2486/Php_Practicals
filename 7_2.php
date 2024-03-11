@@ -29,12 +29,12 @@ class Book {
     $this->auther = $auther; 
   }
   function __destruct() {
-    echo "Profit Is:".$this->sprice-$this->cprice."<br>";
-    echo "Book Name Is: ".$this->name."<br>";
-    echo "Book Cost Price Is: ".$this->cprice."<br>";
-    echo "Book Sale Price Is: ".$this->sprice."<br>";
-    echo "Book Auther Is: ".$this->auther."<br>";
-  }}
+      echo "Profit Is:".$this->sprice-$this->cprice."<br>";
+      echo "Book Name Is: ".$this->name."<br>";
+      echo "Book Cost Price Is: ".$this->cprice."<br>";
+      echo "Book Sale Price Is: ".$this->sprice."<br>";
+      echo "Book Auther Is: ".$this->auther."<br>";
+    }}
 
 
   $apple = new Book($_POST['name'],$_POST['cost'],$_POST['sell'],$_POST['auther']);

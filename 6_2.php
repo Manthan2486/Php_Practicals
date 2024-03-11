@@ -10,11 +10,9 @@
 <h2>Check if the given string is lowercase or not.</h2>
 <?php
 function isLowercase($str) {
-    // Check if all characters in the string are lowercase
     return $str === strtolower($str);
 }
 
-// Example usage:
 $string1 = "hello";
 $string2 = "Hello";
 
@@ -35,19 +33,15 @@ if (isLowercase($string2)) {
 <?php
 
 function reverseString($str) {
-    // Split the string into an array of characters
     $characters = str_split($str);
     
-    // Reverse the array of characters
     $reversedCharacters = array_reverse($characters);
     
-    // Join the reversed characters back into a string
     $reversedString = implode('', $reversedCharacters);
     
     return $reversedString;
 }
 
-// Example usage:
 $string = "Hello, World!";
 $reversedString = reverseString($string);
 echo "Original string: $string <br>";
@@ -58,13 +52,11 @@ echo "Reversed string: $reversedString";
 <?php
 
 function replaceWord($string, $wordToReplace, $replacement) {
-    // Use PHP's str_replace function to replace the word
     $newString = str_replace($wordToReplace, $replacement, $string);
     
     return $newString;
 }
 
-// Example usage:
 $string = "The quick brown fox jumps over the lazy dog.";
 $wordToReplace = "fox";
 $replacement = "cat";

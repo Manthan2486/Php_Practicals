@@ -28,10 +28,10 @@ for ($i = 0; $i < $row; $i++) {
 $sum = array();
 for ($i = 0; $i < $row; $i++) {
     for ($j = 0; $j < $col; $j++) {
-        $sum[$i][$j] = $a1[$i][$j] + $a2[$i][$j];
+        $sum[$i][$j] = $a1[$i][$j] * $a2[$i][$j];
     }
 }
-echo "Addition of two matrices:"."<br>";
+echo "Multiplication of two matrices:"."<br>";
 for ($i = 0; $i < $row; $i++) {
     for ($j = 0; $j < $col; $j++) {
         echo $sum[$i][$j] . " ";

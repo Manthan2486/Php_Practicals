@@ -8,13 +8,11 @@
 <body>
     <h2>Generate a random number between the given range. </h2>
     <?php
-
+    
 function generateRandomNumber($min, $max) {
-    // Use PHP's built-in rand() function to generate a random number
     return rand($min, $max);
 }
 
-// Example usage:
 $min = 10;
 $max = 50;
 $randomNumber = generateRandomNumber($min, $max);
@@ -43,22 +41,17 @@ displayNumberRepresentations($decimalNumber);
 <?php
 
 function trigonometricFunctions($angle_degrees) {
-    // Convert degrees to radians
     $angle_radians = deg2rad($angle_degrees);
     
-    // Calculate sine, cosine, and tangent
     $sin = sin($angle_radians);
     $cos = cos($angle_radians);
     $tan = tan($angle_radians);
-    
-    // Display the results
+  
     echo "For angle $angle_degrees degrees: <br>";
     echo "Sine: $sin <br>";
     echo "Cosine: $cos <br>";
     echo "Tangent: $tan <br>";
 }
-
-// Example usage:
 $angle_degrees = 45;
 trigonometricFunctions($angle_degrees);
 

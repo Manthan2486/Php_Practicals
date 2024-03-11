@@ -12,19 +12,19 @@
         <h2>Student Information Form</h2>
         <form method="post">
             <label for="name">Student Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
+            <input type="text" id="name" name="name"><br>
 
             <label for="eno">Student Enrollment Number:</label><br>
-            <input type="text" id="eno" name="eno"><br><br>
+            <input type="text" id="eno" name="eno"><br>
 
             <label for="mob">Student Mobile Number:</label><br>
-            <input type="text" id="mob" name="mob"><br><br>
+            <input type="text" id="mob" name="mob"><br>
 
             <label for="dep">Student Department:</label><br>
-            <input type="text" id="dep" name="dep"><br><br>
+            <input type="text" id="dep" name="dep"><br>
 
             <label for="div">Student Division:</label><br>
-            <input type="text" id="div" name="div"><br><br>
+            <input type="text" id="div" name="div"><br>
 
             <input type="submit" name="sub" class="btn" value="Submit">
         </form>

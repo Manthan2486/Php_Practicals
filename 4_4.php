@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="multable_ac.php" method="post">
+<form method="post">
     Enter Number: <input type="number" name="mul" >
     <input type="submit" name="sub" class="btn" value="Submit">
 </form>

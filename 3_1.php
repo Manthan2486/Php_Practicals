@@ -19,7 +19,7 @@
             <option value="/">/</option>
         </select><br><br>
         
-        <input type="submit" name="submit" value="Calculate">
+        <input type="submit" name="submit" value="Calculate"><br><br><br>
     </form>
     <?php
         $num1 = $_POST["num1"];
