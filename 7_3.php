@@ -1,16 +1,47 @@
+<?php
+class Book{
+    private $name;
+    private $auther;
+    private $costPrice;
+    private $sellingPrice;
+    public function __construct(){
+        $this->name = $_POST['bname'];
+        $this->auther = $_POST['aname'];
+        $this->costPrice = $_POST['cp'];
+        $this->sellingPrice = $_POST['sp'];
+    }
+    public function display(){
+        echo "Book Name:".$this->name."<br>";
+        echo "Book Auther:".$this->auther."<br>";
+        echo "Book Cost Price:".$this->costPrice."<br>";
+        echo "Book Selling Price:".$this->sellingPrice."<br>";
+    }
+    public function profit(){
+        $profit = $this->sellingPrice - $this->costPrice;
+        echo "Profit:".$profit."<br>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
     <form method="post">
-        Enter Name:<input type="text" name="name" placeholder="Enter Name"><br>
-        Enter Enrollment Number:<input type="text" name="eno" placeholder="Enter Enrollment Number"><br>
-        Enter Mobail Nember:<input type="text" name="mobn" placeholder="Enter Mobail Number"><br>
-        Enter Name:<input type="text" name="name" placeholder="Enter Name"><br>
+        Book:<input type="text" name="bname" placeholder="Enter Book Name"><br>
+        Auther:<input type="text" name="aname" placeholder="Enter Auther Name"><br>
+        Cost Price:<input type="text" name="cp" placeholder="Enter Cost Price"><br>
+        Selling Price:<input type="text" name="sp" placeholder="Enter Selling Price"><br>
+        <input type="submit" value="Submit"><br>
     </form>
+    <?php
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $name = $_POST["bname"];
+        $auther = $_POST["aname"];
+        $costPrice = $_POST["cp"];
+        $sellingPrice = $_POST["sp"];
+        $book = new Book();
+        $book->display();
+        $book->profit();
+    }
+    ?>
 </body>
 </html>

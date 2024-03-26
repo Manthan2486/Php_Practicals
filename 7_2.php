@@ -1,44 +1,47 @@
+<?php
+class Book{
+    public $name;
+    public $auther;
+    public $costPrice;
+    public $sellingPrice;
+    public function __construct(){
+        $this->name = $_POST['bname'];
+        $this->auther = $_POST['aname'];
+        $this->costPrice = $_POST['cp'];
+        $this->sellingPrice = $_POST['sp'];
+    }
+    public function display(){
+        echo "Book Name:".$this->name."<br>";
+        echo "Book Auther:".$this->auther."<br>";
+        echo "Book Cost Price:".$this->costPrice."<br>";
+        echo "Book Selling Price:".$this->sellingPrice."<br>";
+    }
+    public function profit(){
+        $profit = $this->sellingPrice - $this->costPrice;
+        echo "Profit:".$profit."<br>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <title>Document</title>
-</head>
 <body>
-<form method="POST">
-    Enter Name Of Book:<input type="text" name="name" ><br>
-    Enter Cost Price:<input type="text" name="cost"><br>
-    Enter Sale Price:<input type="text" name="sell"><br>
-    Enter Name Of Book Auther:<input type="text" name="auther"><br>
-    <input type="submit" name="sub" class="btn" value="Submit"><br>
-</form>
-
-
-<?php
-class Book {
-  private $name;  
-  private $cprice;
-  private $sprice;
-  private $auther;
-  function __construct($name, $cprice, $sprice, $auther) {
-    $this->name = $name;
-    $this->cprice = $cprice;
-    $this->sprice = $sprice;
-    $this->auther = $auther; 
-  }
-  function __destruct() {
-      echo "Profit Is:".$this->sprice-$this->cprice."<br>";
-      echo "Book Name Is: ".$this->name."<br>";
-      echo "Book Cost Price Is: ".$this->cprice."<br>";
-      echo "Book Sale Price Is: ".$this->sprice."<br>";
-      echo "Book Auther Is: ".$this->auther."<br>";
-    }}
-
-
-  $apple = new Book($_POST['name'],$_POST['cost'],$_POST['sell'],$_POST['auther']);
-?>
-
+    <form method="post">
+        Book:<input type="text" name="bname" placeholder="Enter Book Name"><br>
+        Auther:<input type="text" name="aname" placeholder="Enter Auther Name"><br>
+        Cost Price:<input type="text" name="cp" placeholder="Enter Cost Price"><br>
+        Selling Price:<input type="text" name="sp" placeholder="Enter Selling Price"><br>
+        <input type="submit" value="Submit"><br>
+    </form>
+    <?php
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $name = $_POST["bname"];
+        $auther = $_POST["aname"];
+        $costPrice = $_POST["cp"];
+        $sellingPrice = $_POST["sp"];
+        $book = new Book();
+        $book->display();
+        $book->profit();
+    }
+    ?>
 </body>
 </html>
